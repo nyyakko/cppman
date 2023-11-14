@@ -156,7 +156,7 @@ void project_replace_wildcards_recursively(std::filesystem::path projectPath, st
     }
 }
 
-void create_project_from_template(std::filesystem::path projectTemplate, std::string_view projectName, std::string_view projectLanguage, std::string_view projectStandard)
+void project_create_from_template(std::filesystem::path projectTemplate, std::string_view projectName, std::string_view projectLanguage, std::string_view projectStandard)
 {
     if (!std::filesystem::exists(projectName))
     {
@@ -213,6 +213,6 @@ int main(int argumentCount, char const** argumentValues)
     std::println("Project language: {} ({})", projectLanguage, projectStandard);
     std::println("Project template: {}\n", projectTemplate);
 
-    create_project_from_template(projectTemplate, projectName, projectLanguage, projectStandard);
+    project_create_from_template(projectTemplate, projectName, projectLanguage, projectStandard);
 }
 
