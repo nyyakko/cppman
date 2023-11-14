@@ -74,7 +74,7 @@ std::string setup_project_language_standard(ws::argument_parser const& argumentP
 
 std::string setup_project_template(ws::argument_parser const& argumentParser, auto const& projectLanguage)
 {
-    auto projectTemplate = ""s;
+    std::string projectTemplate {};
 
     if (argumentParser.contains("--template", "-T"))
     {
